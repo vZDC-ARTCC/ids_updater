@@ -76,3 +76,4 @@ jobs:
           IMAGE_TAG: ghcr.io/${{ github.repository }}:master-${{ env.COMMIT_HASH }}
         run: |
           kubectl set image statefulset/ids-websocket ids-websocket=$IMAGE_TAG -n default
+          kubectl set image statefulset/training-ids-websocket ids-websocket=$IMAGE_TAG -n default
